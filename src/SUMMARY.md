@@ -13,3 +13,4 @@
 # Graphs
 
 - [Breadth-First Search](graph/bfs/README.md)
+- [Dijkstra's Algorithm](graph/dijkstra/README.md)
