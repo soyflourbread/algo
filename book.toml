@@ -1,5 +1,10 @@
 [book]
-authors = []
+src = "src"
+
 language = "en"
 multilingual = false
-src = "src"
+
+title = "Data structures cheat sheet"
+description = "The ultimate cheat sheet for data structures and algorithms."
+
+authors = ["soyflourbread"]
