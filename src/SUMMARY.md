@@ -4,8 +4,12 @@
 
 # Arrays
 
-- [Binary Search](./arrays/binary_search/README.md)
-- [Quicksort](./arrays/quicksort/README.md)
-  - [Threeway Quicksort](./arrays/quicksort/threeway.md)
-- [Prefix Sum](./arrays/prefix_sum/README.md)
-- [Sliding Window](./arrays/sliding_window/README.md)
+- [Binary Search](array/binary_search/README.md)
+- [Quicksort](array/quicksort/README.md)
+  - [Threeway Quicksort](array/quicksort/threeway.md)
+- [Prefix Sum](array/prefix_sum/README.md)
+- [Sliding Window](array/sliding_window/README.md)
+
+# Graphs
+
+- [Breadth-First Search](graph/bfs/README.md)
