@@ -11,16 +11,16 @@ pub fn bfs(
     let mut count = usize::MIN;
     let mut breadth = vec![src];
     while !breadth.is_empty() {
-        let mut breadth_next = vec![];
+        let mut breadth_ne = vec![];
         for v in breadth {
             if ret[v].unwrap_or(usize::MAX) <= count {
                 continue;
             }
             ret[v] = Some(count);
 
-            breadth_next.extend(graph[v].clone());
+            breadth_ne.extend(graph[v].clone());
         }
-        breadth = breadth_next;
+        breadth = breadth_ne;
         count += 1;
     }
 

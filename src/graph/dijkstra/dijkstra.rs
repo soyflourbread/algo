@@ -1,5 +1,5 @@
-use std::cmp::Reverse;
-use std::collections::BinaryHeap;
+use std::collections::BinaryHeap as MaxHeap;
+use std::cmp::Reverse as Rev;
 
 /// Given a weighted directed graph,
 ///   returns the minimum distances from `src` to
@@ -13,16 +13,17 @@ pub fn dijkstra(
 ) -> Vec<Option<u32>> {
     let mut ret = vec![None; graph.len()];
 
-    let mut heap = BinaryHeap::new(); // min-heap
-    heap.push(Reverse((u32::MIN, src)));
-    while let Some(Reverse((dist, v))) = heap.pop() {
+    let mut heap = MaxHeap::from(
+        [Rev((u32::MIN, src))]
+    ); // min-heap
+    while let Some(Rev((dist, v))) = heap.pop() {
         if ret[v].unwrap_or(u32::MAX) <= dist {
             continue;
         }
         ret[v] = Some(dist);
 
-        for &(v_next, w) in &graph[v] {
-            heap.push(Reverse((dist + w, v_next)));
+        for &(v_ne, w) in &graph[v] {
+            heap.push(Rev((dist + w, v_ne)));
         }
     }
 

@@ -14,3 +14,5 @@
 
 - [Breadth-First Search](graph/bfs/README.md)
 - [Dijkstra's Algorithm](graph/dijkstra/README.md)
+- [Prim's Algorithm](graph/prim/README.md)
+- [Disjoint Set/Union Find](graph/disjoint_set/README.md)

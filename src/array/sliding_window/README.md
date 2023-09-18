@@ -30,6 +30,9 @@ However, we can summarize some common logic.
 3. Add new elements to the back.
 4. Keep track of the window's internal states (e.g. its sum).
 
+The sliding window itself has a time complexity of `O(n)`.
+However, maintaining window states might increase that.
+
 ## Implementation
 
 ```rust,noplayground

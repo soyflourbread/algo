@@ -16,12 +16,15 @@ generally looks like this:
 
 1. Pick the vertex `v` with minimum distance
    to `src` vertex from the priority queue.
-2. For each adjacent vertex `v_next` of `v`,
+2. For each adjacent vertex `v_ne` of `v`,
    calculate its distance to `src`,
    and insert it into the priority queue.
+
+Due to the use of a priority queue,
+Dijkstra's Algorithm has a time complexity of `O(V log V + E)`.
 
 ## Implementation
 
 ```rust
-{{#rustdoc_include dijkstra.rs::30}}
+{{#rustdoc_include dijkstra.rs::31}}
 ```

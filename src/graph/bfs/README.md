@@ -20,6 +20,9 @@ For each iteration, iterate through vertices in the queue:
    to the current distance.
 3. Add all adjacent vertices to the back of the queue.
 
+The above BFS implementation, if adjacency lists are used,
+has a time complexity of `O(V + E)`.
+
 ## Implementation
 
 Most implementations of BFS use a deque.
