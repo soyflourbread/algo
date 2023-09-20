@@ -73,10 +73,10 @@ away from the entrance of the cycle.
 Remember `a + k` is a multiple of the size of the cycle?
 Yep, the **tortoise is back at the entrance of the cycle**.
 
-## Implementation
-
 This algorithm surprisingly has linear time complexity
 and constant space complexity.
+
+## Implementation
 
 ```rust
 {{#rustdoc_include tortoise_hare.rs::24}}
