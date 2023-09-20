@@ -17,3 +17,4 @@
 - [Prim's Algorithm](graph/prim/README.md)
 - [Disjoint Set/Union Find](graph/disjoint_set/README.md)
 - [Eulerian Path](graph/eulerian_path/README.md)
+- [Floyd's Tortoise and Hare](graph/tortoise_hare/README.md)
