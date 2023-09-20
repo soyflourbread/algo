@@ -1,8 +1,8 @@
-use std::collections::VecDeque;
+use std::collections::VecDeque as Deque;
 
 #[derive(Default)]
 pub struct SlidingWindow {
-    queue: VecDeque<usize>, // a deque is more expressive
+    queue: Deque<usize>, // a deque is more expressive
 
     // TODO: add window's internal states
 }
