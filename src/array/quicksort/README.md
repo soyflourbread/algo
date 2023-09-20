@@ -18,7 +18,9 @@ Then,
    * The array's now partitioned against `pivot`.
 3. Recursively sort the left and right partitions.
 
-Ideally on randomized data, there will be `log n` recursive steps.
+Ideally on randomized data, the two partitions
+should have similar sizes. Therefore,
+there will be `log n` recursive steps ideally.
 Since each recursive step has time complexity of `O(n)`,
 this gives quicksort an overall complexity of `O(n log n)`.
 
