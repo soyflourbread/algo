@@ -1,9 +1,7 @@
-fn partition(
-    ret: &mut Vec<usize>,
-    ptr_0: usize, ptr_1: usize,
-) -> usize {
-    let (ptr_pivot, mut ptr_pivot_ne) = (ptr_1 - 1, ptr_0);
-    for ptr in ptr_0..ptr_pivot {
+fn partition(ret: &mut [usize]) -> usize {
+    let ptr_pivot = ret.len() - 1; // pick last element as pivot
+    let mut ptr_pivot_ne = usize::MIN;
+    for ptr in usize::MIN..ptr_pivot {
         if ret[ptr] >= ret[ptr_pivot] { continue; }
 
         ret.swap(ptr, ptr_pivot_ne);
@@ -19,22 +17,13 @@ fn partition(
 ///
 /// Implementation detail:
 ///   Quicksort, which is an unstable sorting algorithm.
-pub fn sort_unstable(ret: &mut Vec<usize>) {
+pub fn sort_unstable(ret: &mut [usize]) {
     if ret.is_empty() { return; }
 
-    fn _impl(
-        ret: &mut Vec<usize>,
-        ptr_0: usize, ptr_1: usize,
-    ) {
-        if ptr_0 >= ptr_1 { return; }
+    let ptr_pivot = partition(ret);
 
-        let ptr_pivot = partition(ret, ptr_0, ptr_1);
-
-        _impl(ret, ptr_0, ptr_pivot);
-        _impl(ret, ptr_pivot + 1, ptr_1);
-    }
-
-    _impl(ret, usize::MIN, ret.len())
+    sort_unstable(&mut ret[..ptr_pivot]);
+    sort_unstable(&mut ret[ptr_pivot + 1..]);
 }
 
 fn main() {

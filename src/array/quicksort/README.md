@@ -27,5 +27,5 @@ this gives quicksort an overall complexity of `O(n log n)`.
 ## Implementation
 
 ```rust
-{{#rustdoc_include quicksort.rs::38}}
+{{#rustdoc_include quicksort.rs::27}}
 ```
